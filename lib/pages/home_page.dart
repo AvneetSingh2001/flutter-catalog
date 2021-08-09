@@ -5,15 +5,13 @@ class homePage extends StatelessWidget {
   final int days = 2;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Catalogs"),
-        ),
-        body: Container(
-          child: Center(
-            child: Text('it $days'),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Catalogs"),
+      ),
+      body: Container(
+        child: Center(
+          child: Text('HomePage'),
         ),
       ),
     );
