@@ -1,5 +1,12 @@
+class CatalogModel {
+  static final items = [
+    Item(1, "iphone 12 pro", "Apple iphone 12th generation", 999, "#33f0fa",
+        "http://callmobilegalaxy.com/wp-content/uploads/2021/05/Apple-iPhone-12-Pro-Max-Gold.png")
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
