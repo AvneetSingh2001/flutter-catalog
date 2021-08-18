@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_catalog_app/pages/home_detail_page.dart';
 import 'package:tech_catalog_app/pages/home_page.dart';
 import 'package:tech_catalog_app/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
