@@ -11,10 +11,12 @@ class HomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: Theme.of(context).canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -25,7 +27,7 @@ class HomeDetails extends StatelessWidget {
               child: "Buy".text.bold.make(),
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darkBluishcolor),
+                      MaterialStateProperty.all(Theme.of(context).buttonColor),
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
                   )),
@@ -47,16 +49,22 @@ class HomeDetails extends StatelessWidget {
                 edge: VxEdge.TOP,
                 child: Container(
                   width: context.screenWidth,
-                  color: Colors.white,
+                  color: context.cardColor,
                   child: Column(
                     children: [
                       catalog.name.text.xl4
                           .color(
-                            MyTheme.darkBluishcolor,
+                            context.accentColor,
                           )
                           .bold
                           .make(),
                       catalog.desc.text.caption(context).make(),
+                      10.heightBox,
+                      "Rebum magna kasd magna accusam diam dolor amet ut tempor elitr. Amet duo elitr labore nonumy et vero, amet sea kasd voluptua tempor lorem vero no tempor ut. Sit vero et rebum ipsum voluptua gubergren duo aliquyam takimata. Dolore magna tempor invidunt eirmod no, est amet kasd dolores dolor dolores."
+                          .text
+                          .caption(context)
+                          .make()
+                          .p32()
                     ],
                   ).py64(),
                 ),

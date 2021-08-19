@@ -30,12 +30,16 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).cardColor,
       appBar: AppBar(
-        title: Text("Catalogs App"),
+        title: Text(
+          "Catalogs App",
+          style: TextStyle(color: Theme.of(context).accentColor),
+        ),
+        backgroundColor: Colors.transparent,
       ),
       body: Material(
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,
