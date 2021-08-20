@@ -23,7 +23,9 @@ class HomeDetails extends StatelessWidget {
           children: [
             "\$${catalog.price}".text.bold.xl4.red800.make(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+        
+              },
               child: "Buy".text.bold.make(),
               style: ButtonStyle(
                   backgroundColor:
