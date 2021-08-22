@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tech_catalog_app/core/store.dart';
 import 'package:tech_catalog_app/models/cart.dart';
 import 'package:tech_catalog_app/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -28,7 +29,7 @@ class CartPage extends StatelessWidget {
 class _cartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final cartModel = CartModel();
+    final CartModel cartModel = (VxState.store as MyStore).cart;
 
     return SizedBox(
       height: 200,
@@ -55,10 +56,10 @@ class _cartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatelessWidget{
-  final cartModel = CartModel();
+class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final CartModel cartModel = (VxState.store as MyStore).cart;
     return cartModel.items.isEmpty
         ? Center(
             child: Text("Cart is empty !!"),
@@ -70,7 +71,6 @@ class _CartList extends StatelessWidget{
                   trailing: IconButton(
                     onPressed: () {
                       cartModel.remove(cartModel.items[index]);
-                      
                     },
                     icon: Icon(Icons.remove_circle_outline),
                   ),
