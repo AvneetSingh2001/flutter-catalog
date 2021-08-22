@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_catalog_app/core/store.dart';
+import 'package:tech_catalog_app/models/catalog.dart';
 import 'package:tech_catalog_app/pages/cart_page.dart';
 import 'package:tech_catalog_app/pages/home_detail_page.dart';
 import 'package:tech_catalog_app/pages/home_page.dart';
